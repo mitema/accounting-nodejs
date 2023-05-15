@@ -10,16 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 
 
-// Connect to MongoDB
-mongoose
-  .connect(
-    'mongodb://mongo:27017/docker-node-mongoo',
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
 
-const Item = require('./models/accountingproviderItem');
 
 app.get('/about', (req, res) => {
   
@@ -50,10 +41,13 @@ app.post('/review', (req, res) => {
 
 app.post('/finalApplication', (req, res) => {
     let preAssementValue = "0"
-    if (req.body.summary_profit_loss > 0 && req.body.average_asset_value < req.body.loan_amount){
+  
+    if (Number(req.body.summary_profit_loss) > 0 && (Number(req.body.average_asset_value) < Number(req.body.loan_amount))){
+      
       preAssementValue = "60%";
     }
-    else if(req.body.average_asset_value > req.body.loan_amount){
+    else if(Number(req.body.average_asset_value) > Number(req.body.loan_amount)){
+   
       preAssementValue = "100%";
     }
     else{
