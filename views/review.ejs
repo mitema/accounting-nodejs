@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <title>About Page</title>
+</head>
+
+<body>
+    <h1>My Node App</h1>
+    <h4>Balance Sheet overview:</h4>
+  <ul>
+    <% balanceSheet.forEach(function(item) { %>
+      <li>
+        Year:<%= item.year %>,
+        month:<%= item.month %>,
+        profitOrLoss:<%= item.profitOrLoss %>,
+        assetsValue:<%= item.assetsValue %>
+      </li>
+      <% }); %>
+  </ul>
+  <form method="post" action="/finalApplication">
+    <div class="year_container">
+      <label for="year" class="year_label">year</label>
+      <input type="text" name="year_" value="<%= year %>" />
+    </div>
+  <div class="loan_container">
+    <label for="loanAmount" class="loan_amount_label">loanAmount</label>
+    <input type="text" name="loan_amount" value="<%= loanAmount %>" />
+  </div>
+  <div class="summary_profit_loss_container">
+    <label for="summaryOfProfitOrLoss" class="summary_profit_loss_label">Summary Of Profit or Loss</label>
+    <input type="text" name="summary_profit_loss" value="<%= summaryOfProfit %>" />
+  </div>
+  <div class="average_asset_container">
+    <label for="averageAssetsValue" class="average_asset_value_label">Average Assets Value</label>
+    <input type="text" name="average_asset_value" value="<%= averageAssetValue %>"
+  </div>
+  <div class="submit_container"><input class="submit_button" type="submit" value="Submit"></div>
+  
+</form>
+</body>

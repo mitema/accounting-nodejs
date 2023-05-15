@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <title>My Node App</title>
+</head>
+
+<body>
+  <h1>Final Outcome</h1>
+  <ul>
+    <% balance_sheet.forEach(function(item) { %>
+      <li>
+        <b>Year:</b><%= item.year %>,
+        <b>month:</b><%= item.month %>,
+        <b>profitOrLoss:</b><%= item.profitOrLoss %>,
+        <b>assetsValue:</b><%= item.assetsValue %>,
+        <b>preAssementValue:</b><%= item.preAssementValue %>
+      </li>
+      <% }); %>
+  </ul>
+</body>
+
+</html>

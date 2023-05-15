@@ -1,0 +1,69 @@
+body {
+    background-color:aqua
+}
+
+.yearEstablishedLabel{
+    margin-left:10px;
+}
+.nameContainer{
+    margin-bottom: 10px;
+}
+.nameLabel{
+    margin-left:80px;
+}
+.yearContainer{
+    margin-bottom:10px;
+}
+
+.summaryOfProfitContainer{
+    margin-bottom:10px;
+}
+.summaryOfProfitLabel{
+ 
+}
+
+.amountContainer{
+    margin-bottom:10px;
+}
+.amountLabel{
+    margin-left:65px;
+}
+.accountProviderLabel{
+    margin-left:5px;
+}
+.accountProviderContainer{
+   margin-bottom: 10px
+}
+
+.year_label{
+    margin-left:148px;
+}
+
+.year_container{
+    margin-bottom:10px;
+}
+
+.loan_amount_label{
+    margin-left:94px;
+}
+.loan_container{
+    margin-bottom:10px;
+}
+.summary_profit_loss_container{
+    margin-bottom:10px; 
+}
+.average_asset_value_label{
+    margin-left:36px;
+}
+.average_asset_container{
+    margin-bottom:10px;
+}
+.submit_button{
+    margin-left: 200px
+}
+.submitButton{
+    margin-left: 120px;
+}
+.submit_container{
+    margin-top:10px;
+}

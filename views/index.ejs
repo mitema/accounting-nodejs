@@ -5,24 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
   <title>My Node App</title>
 </head>
 
 <body>
   <h1>My Node App</h1>
-  <form method="post" action="/item/add">
-    <label for="name">Name</label>
-    <input type="text" name="name">
-    <input type="submit" value="Add">
+  <form method="post" action="/review">
+    <div class="nameContainer">
+      <label for="name" class="nameLabel">Name</label>
+      <input type="text" name="name">
+    </div>
+  
+    <div class="yearContainer">
+      <label class="yearEstablishedLabel" for ="yearEstablished">Year Established</label>
+      <input type="text" name="yearEstablished"/>
+    </div>
+
+    <div class="summaryOfProfitContainer">
+      <label for="summaryOfProfit" class="summaryOfProfitLabel">Summary of profit<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or loss by year:</label>
+      <input type="text" name ="summaryOfProfit"/>
+    </div>
+  
+  <div class="amountContainer"> 
+    <label for="amount" class="amountLabel">Amount</label>
+    <input type="text" name="amount" />
+  </div>
+  <div class="accountProviderContainer">
+    <label for ="accountProvider" class="accountProviderLabel">Account Provider</label>
+    <select id="accountProvider" name="accountProvider">
+      <option value =""></option>
+      <option value="xerox">Xerox</option>
+      <option value="myov">Myob</option>
+    </select>
+  </div>
+    <input class="submitButton" type="submit" value="Submit">
   </form>
-  <h4>Items:</h4>
-  <ul>
-    <% items.forEach(function(item) { %>
-      <li>
-        <%= item.name %>
-      </li>
-      <% }); %>
-  </ul>
 </body>
 
 </html>
